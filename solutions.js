@@ -17,16 +17,30 @@ console.log is itself a function that will log whatever arguments are passeed in
 // }
 
 
-function checkPalindrome(string) {
-    // convert the string to lowercase
-    string = string.toLowerCase();
-    // remove non-alphanumeric characters from the string
-    string = string.replace(/[^a-z0-9]/g, '');
-    // reverse the string
-    let reversedStr = string.split('').reverse().join('');
-    // check if the string is equal to its reverse
-    return string === reversedStr;
-  }
+// function checkPalindrome(string) {
+//     // convert the string to lowercase
+//     string = string.toLowerCase();
+//     // remove non-alphanumeric characters from the string
+//     string = string.replace(/[^a-z0-9]/g, '');
+//     // reverse the string
+//     let reversedStr = string.split('').reverse().join('');
+//     // check if the string is equal to its reverse
+//     return string === reversedStr;
+//   }
 
-  console.log(checkPalindrome("Radar")); // => true
-  console.log(checkPalindrome("Borscht")); // => false
+//   console.log(checkPalindrome("Radar")); // => true
+//   console.log(checkPalindrome("Borscht")); // => false
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// Write a function sumArray that takes an array as an argument. The array should contain numbers. The function should return the sum of the numbers in the array. Use a for loop within the function to iterate over the array and sum the contents. Use a variable such as
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+console.log(sumArray([1, 2, 3, 4, 5, 6])); // => 21
